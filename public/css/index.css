@@ -67,18 +67,18 @@
 }
 
 .lesson-four-task-seventeen #quantity:in-range {
-    background-color: green !important;
+    background-color: red !important;
 }
 
 .lesson-four-task-eighteen input:placeholder-shown {
     background-color: red !important;
 }
 
-.lesson-four-task-nineteen div:focus-within {
-    background-color: yellow;
-    color: #fff;
+div.lesson-four-task-nineteen button:focus-within {
+    color:white;
+    background: yellow;
 }
 
-.lesson-four-task-twenty form:invalid {
-    background-color: red;
+div.lesson-four-task-twenty input:invalid {
+    background: red;
 }
