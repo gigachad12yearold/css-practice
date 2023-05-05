@@ -82,3 +82,7 @@ div.lesson-four-task-nineteen button:focus-within {
 div.lesson-four-task-twenty input:invalid {
     background: red;
 }
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
