@@ -1,0 +1,418 @@
+@layer normalize, component, variant, main, adaptive;
+@layer component {
+  .button {
+    text-decoration: none;
+    color: var(--color-black);
+    padding: var(--spacing-3);
+    border-radius: var(--radius-1);
+    text-align: center;
+    border: 1px solid transparent;
+  }
+  .click {
+    transition: opacity var(--transition-1);
+  }
+  .click:hover {
+    opacity: var(--opacity-1);
+    cursor: pointer;
+  }
+  .click:active {
+    opacity: var(--opacity-2);
+  }
+  .page_section {
+    display: flex;
+    justify-content: center;
+  }
+  .icon {
+    display: block;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .double-line {
+    line-height: var(--line-height);
+  }
+  .feat_card {
+    padding: var(--spacing-3);
+    background-color: var(--color-white);
+    display: grid;
+    gap: var(--spacing-3);
+
+    font-size: var(--size-2);
+  }
+}
+
+@layer variant {
+  .button_primary {
+    color: var(--color-white);
+    background-color: var(--color-prmary);
+  }
+  .button_secondary {
+    color: var(--color-prmary);
+    background-color: var(--color-white);
+    border-color: var(--color-prmary);
+    border-width: 2px;
+  }
+  .page_section-light {
+    background-color: var(--color-light);
+  }
+
+  .feat_icon {
+    height: 48px;
+    width: 48px;
+  }
+  .icon_arrow {
+    height: 14px;
+    width: 24px;
+    background-image: url('/svg/arrow_right.svg');
+  }
+  .icon_arrow_blue {
+    height: 12px;
+    width: 22px;
+    background-image: url('/svg/arrow_blue.svg');
+
+  }
+  .feat_card_big {
+    grid-template-rows: min-content min-content 1fr min-content;
+    grid-row: 1/3;
+  }
+}
+@font-face {
+  font-family: 'HelveticaNeueBold';
+  src: url('/font/HelveticaNeueBold.ttf');
+}
+
+body {
+  font-family: HelveticaNeueBold, sans-serif;
+  background-color: var(--color-white);
+}
+
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-prmary: #611f69;
+  --color-light: F4EDE4;
+  --page-width-big: 1260px;
+  --page-width-medium: 1000px;
+  --page-width-small: 700px;
+  --spacing-1: 8px;
+  --spacing-2: 12px;
+  --spacing-3: 16px;
+  --spacing-4: 20px;
+  --spacing-5: 24px;
+  --spacing-6: 28px;
+  --spacing-7: 32px;
+  --spacing-8: 36px;
+  --spacing-gap: 80px;
+  --size-1: 14px;
+  --size-2: 18px;
+  --size-3: 22px;
+  --size-4: 26px;
+  --size-5: 30px;
+  --size-6: 34px;
+  --radius-1: 4px;
+  --opacity-1: 0.7;
+  --opacity-2: 0.5;
+  --transition-1: 0.7s;
+  --line-height: 1.5em;
+}
+
+@layer main {
+  .page {
+    display: grid;
+  }
+
+  .page_content {
+    width: 100%;
+    padding: var(--spacing-3);
+    display: grid;
+  }
+
+  .hero_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 200px;
+    min-height: 600px;
+    /* height: 60vh; */
+  }
+  .hero {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .hero_content {
+    display: grid;
+    gap: var(--spacing-5);
+    align-content: center;
+    max-width: 425px;
+    position: relative;
+    color: var(--color-black);
+  }
+  .hero_image {
+    position: absolute;
+    left: 580px;
+    top: 0;
+  }
+  .brands {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: var(--spacing-8);
+    row-gap: var(--spacing-4);
+    flex-wrap: wrap;
+  }
+  .hero_label {
+    font-size: var(--size-1);
+  }
+  .hero_title {
+    font-size: 50px;
+  }
+  .hero_info {
+    font-size: var(--size-2);
+  }
+  .hero_buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-5);
+  }
+  .features_section {
+    padding-top: 150px;
+    padding-bottom: 140px;
+    display: grid;
+    gap: var(--spacing-5);
+    background-image: url('/img/puzl.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+
+  .section_title {
+    font-size: var(--size-6);
+  }
+  .features_description {
+    font-size: var(--size-2);
+    max-width: 520px;
+  }
+
+  .feat_link {
+    justify-self: flex-end;
+  }
+  .features_grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: var(--spacing-3);
+  }
+
+  .advantages_section {
+    padding-top: 60px;
+    padding-bottom: 140px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 80px;
+    background-image: url('/img/advantages.png');
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+  .advantages_title_container {
+    grid-column: 3/5;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+  }
+  .advantages_description {
+    font-size: var(--size-2);
+    max-width: 520px;
+  }
+
+  .advantages_grid {
+    grid-column: 2/5;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: var(--spacing-3);
+  }
+  .review_section {
+    padding-top: var(--spacing-gap);
+    padding-bottom: 50px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-8);
+  }
+  .review_section > img {
+    align-self: center;
+  }
+  .review_title_container {
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+  }
+
+  .review_title_container > q {
+    font-size: var(--size-4);
+    line-height: var(--line-height);
+  }
+  .explore_section {
+    padding-top: 110px;
+    padding-bottom: var(--spacing-gap);
+    display: grid;
+    justify-content: center;
+    row-gap: var(--spacing-8);
+  }
+  .explore_section > h2 {
+    text-align: center;
+  }
+  .explore_card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 70px;
+  }
+  .explore_card {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 286px;
+    grid-template-rows: min-content min-content 1fr min-content;
+    gap: var(--spacing-1);
+  }
+  .explore_card > span {
+    color:#454245;
+    font-size: var(--size-1);
+    line-height: 1.3em;
+  }
+  .explore_card > strong {
+    font-size: var(--size-3);
+    line-height: var(--line-height);
+  }
+  .learn-more {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    padding-top: var(--spacing-7);
+  }
+  .learn-more_text {
+
+    color: #1264A3;
+    text-transform: uppercase;
+  }
+}
+@layer adaptive {
+  @media all and (width > 1260px) {
+    .page_content {
+      max-width: var(--page-width-big);
+    }
+    .page_content_small {
+      max-width: var(--page-width-medium);
+    }
+  }
+  @media all and (1260px >= width >=1000px) {
+    .page_content {
+      max-width: var(--page-width-medium);
+    }
+    .hero_image {
+      height: 300px;
+      left: 580px;
+      top: 0;
+    }
+  }
+  @media all and (width < 1000px) {
+    .page_content {
+      max-width: var(--page-width-small);
+    }
+    .page_content_small {
+      max-width: var(--page-width-small);
+    }
+    .hero_section {
+      gap: var(--spacing-gap);
+    }
+    .hero_image {
+      position: static;
+      width: 100%;
+      order: -1;
+    }
+    .hero_content {
+      max-width: 100%;
+    }
+    .features_section {
+      padding-top: var(--spacing-gap);
+      padding-bottom: var(--spacing-gap);
+    }
+    .features_grid-4 > .feat_card:first-of-type {
+      grid-row: 1/3;
+    }
+    .features_grid-4 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .features_section {
+      background-image: none;
+    }
+    .advantages_section {
+      background-image: none;
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: var(--spacing-8);
+
+    }
+
+
+    .advantages_grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .review_section {
+      display: flex;
+      flex-direction: column;
+    }
+    .explore_section {
+      padding-top: var(--spacing-gap);
+    }
+    .explore_card-container {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: var(--spacing-2);
+      row-gap: var(--spacing-6);
+      position: relative;
+    }
+
+  }
+
+  @media all and (width < 600px) {
+    .features_grid-4 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .advantages_grid {
+      grid-template-columns: repeat(2, 1fr);
+    } 
+    .review_section > img {
+      position: static;
+      width: 100%;
+      order: -1;
+    }
+    .explore_card-container {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+  }
+  @media all and (width < 400px) {
+    .features_grid-4 {
+      grid-template-columns: 1fr;
+    }
+
+    .advantages_grid {
+      grid-template-columns: 1fr;
+
+    } 
+
+    .feat_card_big {
+        grid-row: auto;
+    }
+    .advantages_title_container {
+      grid-column: 2/5; 
+    } 
+
+    .hero_buttons {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-2);
+    }
+  }
+}
